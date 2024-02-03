@@ -1,0 +1,1 @@
+{"uuid":"2863f06f-cd8c-461d-bd9a-07732f26c257","name":"com.orange.tests.PIMTest.setUP","children":["4de4bbd4-3379-409f-b5f2-90f14000810d"],"description":"","befores":[{"name":"setUP","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1706611801428,"stop":1706611813672}],"afters":[],"start":1706611801428,"stop":1706611813673}
