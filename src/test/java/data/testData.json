@@ -21,11 +21,31 @@
 	"PayGradePage": {
 		"Name": "Admin Approved Adminstrator Latest"
 	},
+	"AddEmployeePage": {
+		"FirstName": "Admin",
+		"MiddleName": "Latest",
+		"LastName": "New"
+	},
+	"SignIn": {
+		"email": "testing1234@gmail.com",
+		"password": "Admin@123"
+	},
+	"ChargeSavvyLogin":{
+	"username":"Pavan",
+	"password":"Pavan@4939"
+	},
+	"CreateInventory":{
+	"SearchField": "Developer",
+	"POSName" : "Testing",
+	"Price": "20",
+	"Quantity": "3"
+	},
 	
-	"AddEmployeePage":{
+	"Berg":{
+	"portNumber": "4000",
+	"ipAddress" : "14.195.50.210",
+	"ringNumber": "15"
+	}
 	
-	"FirstName": "Admin",
-	"MiddleName": "Latest" ,
-	"LastName" : "New"
-}
+	
 }

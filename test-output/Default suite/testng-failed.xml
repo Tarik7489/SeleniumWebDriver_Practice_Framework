@@ -3,12 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.orange.tests.PIMTest">
+      <class name="com.chargeSavvy.SavvyLoginTest">
         <methods>
-          <include name="setUP"/>
-          <include name="verifyAddEmployee"/>
+          <include name="loginWithValidCredentials"/>
+          <include name="verifyUserRequireErrMsg"/>
+          <include name="verifyPwdRequireErrMsg"/>
+          <include name="closeBrowser"/>
+          <include name="setUp"/>
+          <include name="verifyUserNameAndPwdRequireMsg"/>
         </methods>
-      </class> <!-- com.orange.tests.PIMTest -->
+      </class> <!-- com.chargeSavvy.SavvyLoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
