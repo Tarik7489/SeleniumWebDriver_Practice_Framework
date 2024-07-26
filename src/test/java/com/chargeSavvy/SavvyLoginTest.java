@@ -43,9 +43,8 @@ public class SavvyLoginTest {
 	
 	public void loginWithValidCredentials() throws IOException, ParseException, InterruptedException {
 		
-//		Thread.sleep(5000);
+		Thread.sleep(5000);
 		Assert.assertTrue(savvy.verifyLoginTxt("Login"), "Text does not match!");
-		Assert.assertTrue(savvy.verifyLoginTxt("TEst"), "Text does not match!");
 		savvy.LOGIN();
 	}
 	

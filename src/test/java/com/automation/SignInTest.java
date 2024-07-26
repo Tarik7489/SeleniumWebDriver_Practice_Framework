@@ -1,38 +1,44 @@
 package com.automation;
 
-import java.io.IOException;
+import java.io.File;
 
-import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
-import utils.SeleniumWrapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class SignInTest {
 	
-	WebDriver driver;
-	SeleniumWrapper wrapper;
-	SignIn signin;
-	
-	
-	@BeforeClass
-	public void setup() {
-		
-		driver = new ChromeDriver();
-		wrapper = new SeleniumWrapper(driver);
-		signin = new SignIn(driver);
-		
-		driver.get("https://automationexercise.com/");
-		driver.manage().window().maximize();
-		
-	}
-	
-	@Test
-	public void loginWithValidCredentials() throws IOException, ParseException {
-		
-		signin.login();
-	}
 
-}
+		 
+		 
+		 public String getJsonData(String filePath, String jsonPath) {
+			 
+			 File file = new File(filePath);
+			 ObjectMapper objectMapper = new OnjectMapper();
+			 com.fasterxml.jackson.databind.JsonNode jsonNode = objectMapper.readTree(file);
+			 
+			 
+			 String [] pathSegment = jsonPath.split("\\.");
+			 
+			 for(String segment : pathSegment) {
+				 
+				 jsonNode = jsonNode.get(segment);
+				 
+				 if(jsonNode ==null) {
+					 return null;
+					 
+				 }
+			 }
+			 return jsonNode.textValue();
+			 
+		 }
+		 
+		 public String getTestData(String jsonPath) {
+			 String path = System.getProperty("user.dir")+"\\src\\main\\java\\data\\testData.json";
+			 String result = getJsonData(path, jsonPath);
+			 System.out.println(result);
+			 
+			 return result;
+		 }
+	 }

@@ -59,6 +59,7 @@ public class SearchMerchantTest {
 		search.clickOnEyeIcon();
 		search.clickOnPOSConfiguration();
 		search.clickingOnBegTab();
+
 		search.clickOnCreateBergBtn();
 		search.enterPortNumber(wrapper.getTestData("Berg.portNumber"));
 		search.enterIpAddress(wrapper.getTestData("Berg.ipAddress"));

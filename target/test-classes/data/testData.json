@@ -45,7 +45,19 @@
 	"portNumber": "4000",
 	"ipAddress" : "14.195.50.210",
 	"ringNumber": "15"
+	},
+	
+	"search":{
+	
+	"name": "Ideyalabs!23455"
+	},
+	
+	"BFSI_Login": {
+	
+	"email" : "tarika@ideyalabs.com",
+	"password": "Admin@123",
+	"code" : "123456",
+	"null": ""
+	
 	}
-	
-	
 }

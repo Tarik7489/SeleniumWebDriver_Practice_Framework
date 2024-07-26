@@ -3,16 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.chargeSavvy.SavvyLoginTest">
+      <class name="com.Web_Automation.LoginTest">
         <methods>
-          <include name="loginWithValidCredentials"/>
-          <include name="verifyUserRequireErrMsg"/>
-          <include name="verifyPwdRequireErrMsg"/>
           <include name="closeBrowser"/>
-          <include name="setUp"/>
-          <include name="verifyUserNameAndPwdRequireMsg"/>
+          <include name="loginWithValidCredentials"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- com.chargeSavvy.SavvyLoginTest -->
+      </class> <!-- com.Web_Automation.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

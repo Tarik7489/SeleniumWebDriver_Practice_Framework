@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -20,13 +21,18 @@ public class LogoutTest {
 	SavvyLoginPage login;
 	LogoutPage logout;
 
-	@Parameters("qaURL")
+
 	@BeforeMethod(groups = { "Smoke" })
-	public void setUP(String qaURL) {
+	public void setUP() {
+		
+		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		
 
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(options);
 
-		driver.get(qaURL);
+		driver.get("https://qa.mychargesavvy.com/");
 		driver.manage().window().maximize();
 
 		login = new SavvyLoginPage(driver);
@@ -39,14 +45,13 @@ public class LogoutTest {
 		Thread.sleep(4000);
 		login.LOGIN();
 		Thread.sleep(5000);
-//		logout.LOGOUT();
 		logout.clickOnProfileDropDown();
 		logout.clickOnLogoutBtn();
 
 		Assert.assertTrue(logout.verifyLoginText("Login"), "Text Doesn't match");
 	}
 
-	@AfterMethod
+	@AfterMethod (groups = {"smoke"})
 	public void closeBrowser() {
 		driver.quit();
 	}

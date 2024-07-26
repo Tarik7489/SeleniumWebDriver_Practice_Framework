@@ -23,6 +23,8 @@ public class LogoutPage extends SeleniumWrapper{
 	
 	private By getPfofileDropdown = By.xpath("(//span[.='Pavan'])[1]");
 	
+	
+	
 	private By getLogoutBtn = By.xpath("//*[.='Logout']");
 	
 	private By getLoginText = By.xpath("//h1[text()=\"Login\"]");

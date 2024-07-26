@@ -59,6 +59,7 @@ public class SavvyLoginPage extends SeleniumWrapper {
 	
 	
 	public void LOGIN() throws IOException, ParseException, InterruptedException {
+		Thread.sleep(3000);
 		enterUserName(wrapper.getTestData("ChargeSavvyLogin.username"));
 		enterPassword(wrapper.getTestData("ChargeSavvyLogin.password"));
 		clickOnLoginBtn();
